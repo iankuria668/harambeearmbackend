@@ -47,7 +47,7 @@ class Signup(Resource):
         except Exception as e:
             print(f"Exception: {e}")  # Log the exception
             return make_response({'error': 'Invalid inputs'}, 400)
-
+# Checking session
 class CheckSession(Resource):
     @jwt_required()
     def get(self):
